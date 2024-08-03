@@ -6,9 +6,17 @@ jobs:
         name: first nitya's job
         runs-on: ubuntu-latest
         steps:
-            - run: echo "Hello world"
-            - run : echo "Nitya is running"
+            - name: say hello
+              run: echo "Hello world"
+            - name: say to nitya
+              run : echo "Nitya is running"
     my-second-job:
         runs-on: ubuntu-latest
         steps:
-            - run: echo "Bye World"
+            - name: failed step
+              run: |
+                echo "I will fail"
+                exit 1
+            - name: Say GoodBye
+              run: echo "good bye"
+                   echo "end of line"
