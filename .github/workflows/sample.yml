@@ -3,6 +3,7 @@ on: push
 
 jobs:
     my-first-job:
+        name: first nitya's job
         runs-on: ubuntu-latest
         steps:
             - run: echo "Hello world"
