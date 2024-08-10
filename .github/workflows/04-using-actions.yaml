@@ -5,16 +5,20 @@ on: push
 jobs:
     build:
         runs-on: ubuntu-latest
+        defaults: # Instead of adding working dir in each step, add it like this in job level.
+            run:
+                working-directory: 04-using-actions/react-app
         steps:
-            - name: Checkout Code
+            - name: Checkout Code #0. Check out code from repo
               uses: actions/checkout@v4
             - name: Setup Node
-              uses: actions/setup-node@v4
+              uses: actions/setup-node@v4  # setup node version
               with:
                 node-version: '18.x'
-            - name: Install Dependencies
+            - name: Install Dependencies # 1. Install deps of our application
               run: npm ci
-              working-directory: 04-using-actions/react-app
-        #0. Check out code from repo
-        # 1. Install deps of our application
-        # 2. Execute automated tests
+            - name: Run Unit Tests # 2. Execute automated tests
+              run: npm run test
+        
+       
+        
