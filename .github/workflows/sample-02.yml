@@ -1,6 +1,5 @@
 name: 02-workflow
 on:
-    push:
     pull_request:
     workflow_dispatch:
 
