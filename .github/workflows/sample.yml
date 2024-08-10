@@ -1,5 +1,5 @@
 name: Automated Deployment
-on: push
+on: workflow_dispatch
 
 jobs:
     my-first-job:

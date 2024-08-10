@@ -1,0 +1,9 @@
+name: 02-workflow
+on: push
+
+jobs:
+  my-echo-job:                # Fixed the job name to remove the space.
+    runs-on: ubuntu-latest
+    steps:
+      - name: show the trigger
+        run: echo "I have been triggered by ${{ github.event_name }}"
