@@ -1,4 +1,4 @@
-function bubblesort(arr){
+function bubblesort(arr){ //good
 let n = arr.length;
 
 for(let i=0;i<n;i++){
