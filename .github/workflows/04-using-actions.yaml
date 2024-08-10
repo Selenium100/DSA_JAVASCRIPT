@@ -1,0 +1,15 @@
+name: 04 - Using Actions
+
+on: push
+
+jobs:
+    build:
+        runs-on: ubuntu-lastet
+        steps:
+            - name: Checkout Code
+              uses: actions/checkout@v4
+            - name: Printing Folders
+              run: ls
+        #0. Check out code from repo
+        # 1. Install deps of our application
+        # 2. Execute automated tests
