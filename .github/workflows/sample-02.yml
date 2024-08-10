@@ -1,5 +1,10 @@
 name: 02-workflow
-on: push
+on:
+    push:
+    pull_request:
+    schedule:
+        - cron: '*/5 * * * *'
+    workflow_dispatch:
 
 jobs:
   my-echo-job:                # Fixed the job name to remove the space.
